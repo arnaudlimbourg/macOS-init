@@ -28,37 +28,12 @@ echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
 # Mettre à jour la liste des applications disponibles
 brew update
 
-# Installer Dropbox au plus tôt pour lancer la synchro des settings
-brew cask install dropbox
-echo "Ouverture de Dropbox pour commencer la synchronisation"
-open -a Dropbox
-
 # Installer les nouvelles applications du bundle Brewfile
 # et mettre à jour celles déjà présentes
 brew bundle
 
-# Installer version 6 de screenflow (plutôt que la dernière, dont je n'ai pas la license)
-brew cask install https://raw.githubusercontent.com/colindunn/homebrew-cask/9236cc83c732310b6308971d5d376369f5f78cf8/Casks/screenflow.rb
-
-echo "Installation des outils de développement Ruby"
-# Mise à jour de RubyGems
-sudo gem update --system --silent
-# Installation de Bundler
-sudo gem install bundler -n /usr/local/bin
-
-echo "Installation des outils de développement Node"
-# Installation de composants Node
-npm install -g npm-check-updates
-# npm install -g grunt
-# npm install -g grunt-cli
-
-echo "Installation d'applications en Node"
-# De meilleures aides en ligne : http://tldr.sh/
-npm install -g tldr
-
-echo "Finalisation de l'installation de Apache et PHP"
-brew services start httpd
-brew services start php
+echo "Finalisation des outils de dev"
+brew services start postgresql
 
 ## ************************* CONFIGURATION ********************************
 echo "Configuration de quelques paramètres par défaut"
@@ -79,7 +54,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Nlsv ▸ List View
 # clmv ▸ Column View
 # icnv ▸ Icon View
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Afficher le chemin d'accès
 defaults write com.apple.finder ShowPathbar -bool true
@@ -130,6 +105,12 @@ defaults write com.apple.dock magnification -bool true
 # Taille maximale pour l'agrandissement
 defaults write com.apple.dock largesize -float 128
 
+# Place on left of screen
+defaults write com.apple.dock pinning -string start
+
+# Remove hiding delay
+defaults write com.apple.Dock autohide-delay -float 0
+
 ## MISSION CONTROL
 
 # Pas d'organisation des bureaux en fonction des apps ouvertes
@@ -157,8 +138,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # defaults write com.apple.dock wvous-tl-modifier -int 0
 
 # En haut à droite : screensaver
-defaults write com.apple.dock wvous-tr-corner -int 5
-defaults write com.apple.dock wvous-tr-modifier -int 0
+# defaults write com.apple.dock wvous-tr-corner -int 5
+# defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # En bas à gauche : fenêtres de l'application
 # defaults write com.apple.dock wvous-bl-corner -int 3
@@ -232,18 +213,17 @@ sudo defaults write com.apple.systemsound com.apple.sound.beep.volume -float 1
 # Enregistrer les screenshots en PNG (autres options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-# Mettre une ombre sur les screenshots
+# Ombre sur les screenshots
 defaults write com.apple.screencapture disable-shadow -bool false
 
 ## ************ Fin de l'installation *********
-echo "Finder et Dock relancés… redémarrage nécessaire pour terminer."
+echo "====> Relaunching Finder and Dock to apply changes"
 killall Dock
 killall Finder
 
-echo "Derniers nettoyages…"
+echo "====> Cleaning up"
 brew cleanup
 rm -f -r /Library/Caches/Homebrew/*
 
 echo ""
-echo "ET VOILÀ !"
-echo "Après synchronisation des données Dropbox (seuls les dossiers « Mackup » et « Settings » sont nécessaires dans un premier temps), lancer le script post-cloud.sh"
+echo "====> Done!"

@@ -15,4 +15,4 @@ brew cask cleanup
 brew doctor
 
 echo ""
-echo "ET VOILÀ !"
+echo "====> Update done!"
