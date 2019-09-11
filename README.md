@@ -1,4 +1,4 @@
-**⚠️ Ce script a été conçu pour mes besoins. Avant de l'utiliser pensez bien [à le modifier](https://github.com/nhoizey/macOS-init#comment-lutiliser) en fonction de vos besoins ! ⚠️**
+**⚠️ Ce script a été conçu pour mes besoins. Avant de l'utiliser pensez bien [à le modifier](https://github.com/arnaudlimbourg/macOS-init#comment-lutiliser) en fonction de vos besoins ! ⚠️**
 
 ## Présentation
 
@@ -17,9 +17,9 @@ Voir la présentation détaillée dans mon billet de blog « [automatiser l'ins
 
 ### Première étape
 
-1. Téléchargez la dernière version du projet ([lien direct](https://github.com/nhoizey/macOS-init/archive/master.zip)) ;
+1. Téléchargez la dernière version du projet ([lien direct](https://github.com/arnaudlimbourg/macOS-init/archive/master.zip)) ;
 1. Ouvrez les fichiers `run-first.sh` et `Brewfile`, et modifiez ce qui est installé par défaut ;
-1. Pensez à changer les lignes `brew cask install dropbox` et `open -a Dropbox` de [`post-install.sh`](https://github.com/nhoizey/macOS-init/blob/master/post-install.sh) en fonction du service Cloud utilisé, ou alors à la supprimer si vous ne voulez pas en utilisez ;
+1. Pensez à changer les lignes `brew cask install dropbox` et `open -a Dropbox` de [`post-install.sh`](https://github.com/arnaudlimbourg/macOS-init/blob/master/post-install.sh) en fonction du service Cloud utilisé, ou alors à la supprimer si vous ne voulez pas en utilisez ;
 1. À partir de la ligne `## *** CONFIGURATION ***`, le script configure quelques réglages par défaut, à modifier selon vos besoins ;
 1. [Ouvrez ensuite le Terminal de macOS](http://fr.wikihow.com/ouvrir-le-Terminal-sur-un-Mac), glissez le fichier `run-first.sh` depuis le Finder vers le Terminal, et appuyez sur la touche <kbd>Entrée</kbd> et accrochez votre ceinture ;
 
@@ -36,7 +36,7 @@ Si tout va bien, il se terminera normalement sans erreur, mais en cas d'erreur, 
 
 Quand le premier script est terminé, et quand vos données sont synchronisées depuis le cloud :
 
-1. Ouvrez le fichier `post-sync.sh` et modifiez la [ligne 8](https://github.com/nhoizey/macOS-init/blob/master/post-cloud.sh#L8) en fonction du service de Cloud choisi, ou laissez-la en commentaire si vous utilisez Dropbox (choix par défaut) ;
+1. Ouvrez le fichier `post-sync.sh` et modifiez la [ligne 8](https://github.com/arnaudlimbourg/macOS-init/blob/master/post-cloud.sh#L8) en fonction du service de Cloud choisi, ou laissez-la en commentaire si vous utilisez Dropbox (choix par défaut) ;
 1. Glissez le fichier `post-sync.sh` du Finder vers le Terminal, et appuyez sur la touche <kbd>Entrée</kbd> pour finir l'installation.
 
 Voilà, c'est opérationnel.
@@ -45,16 +45,11 @@ Voilà, c'est opérationnel.
 
 1. Lancez le script `update.sh` pour mettre à jour toutes les applications qui le nécessitent.
 
-## TL;DR réservé à Nicolas
+## TL;DR réservé à Arnaud
 
-Cette automatisation supplémentaire lance directement l'installation de **ma propre sélection** d'applications pour mon ordinateur de travail :
-
-```shell
-$ curl -sfL https://nhoizey.github.io/macOS-init/run.sh | sh
-```
-
-Voici de même pour mon ordinateur personnel à domicile (voir la branche "home") :
+Cette automatisation supplémentaire lance directement l'installation de **ma propre sélection** d'applications pour mon ordinateur:
 
 ```shell
-$ curl -sfL https://nhoizey.github.io/macOS-init/run-home.sh | sh
+$ curl -sfL https://raw.githubusercontent.com/arnaudlimbourg/macOS-init/master/run.sh | sh
 ```
+
