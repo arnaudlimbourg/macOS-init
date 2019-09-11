@@ -14,7 +14,7 @@ brew 'mas'
 
 # Réseau
 brew 'curl'
-brew 'dnscrypt-proxy'
+brew 'dnscrypt-proxy', restart_service: true
 brew 'openssh'
 brew 'openssl'
 brew 'wget'
@@ -22,6 +22,7 @@ cask 'transmit'
 
 # Terminal
 brew 'fish'
+brew 'macvim'
 cask 'iterm2'
 
 # Améliorations d'interface et usage
@@ -33,7 +34,6 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 mas '1Password', id: 443987910
 mas 'The Unarchiver', id: 425424353
-mas 'DaisyDisk', id: 411643860
 
 # Backup et synchro
 brew 'mackup'
@@ -58,7 +58,17 @@ cask 'font-fira-code'
 cask 'font-hack-nerd-font'
 cask 'github'
 cask 'visual-studio-code'
-#mas 'Xcode', id: 497799835
+brew 'teensy_loader_cli'
+
+mas "DaisyDisk", id: 411643860
+mas "Day One", id: 1055511498
+mas "Moom", id: 419330170
+mas "Sweet Home 3D", id: 669289700
+mas "Things", id: 904280696
+mas "Todoist", id: 585829637
+mas "Trello", id: 1278508951
+mas "Tweetbot", id: 1384080005
+mas "Xcode", id: 497799835
 
 # Vidéos
 brew 'ffmpeg'
@@ -70,7 +80,6 @@ cask 'steam'
 
 # Communication
 cask 'twist'
-mas 'Tweetbot 3', id: 1384080005
 
 # Bureautique
 cask 'netnewswire'
