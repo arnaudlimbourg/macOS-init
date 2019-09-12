@@ -86,3 +86,4 @@ cask 'twist'
 # Bureautique
 cask 'netnewswire'
 cask 'keep-it'
+cask 'capture-one'
