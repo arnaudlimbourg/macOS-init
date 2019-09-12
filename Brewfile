@@ -54,11 +54,13 @@ brew 'python'
 brew 'fontconfig'
 # https://github.com/tonsky/FiraCode/wiki#installing-font
 cask 'font-fira-code'
+cask 'font-source-code-pro'
 # https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
 cask 'font-hack-nerd-font'
 cask 'github'
 cask 'visual-studio-code'
 brew 'teensy_loader_cli'
+brew 'yarn'
 
 mas "DaisyDisk", id: 411643860
 mas "Day One", id: 1055511498
@@ -83,3 +85,4 @@ cask 'twist'
 
 # Bureautique
 cask 'netnewswire'
+cask 'keep-it'
