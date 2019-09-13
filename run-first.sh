@@ -22,8 +22,10 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Ajout des binaires Homebrew au PATH
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+
+echo "Switch to fish shell"
+chsh -s /usr/local/bin/fish
 
 # Mettre à jour la liste des applications disponibles
 brew update
