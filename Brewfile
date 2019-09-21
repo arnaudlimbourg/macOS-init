@@ -63,6 +63,7 @@ brew 'pipenv'
 mas "Xcode", id: 497799835
 brew "heroku/brew/heroku"
 brew 'redis'
+brew 'mailhog'
 
 # Vidéos
 brew 'ffmpeg'
