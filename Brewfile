@@ -5,6 +5,7 @@ tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'caskroom/drivers'
+tap "heroku/brew"
 
 # Définir où placer les applications installées
 cask_args appdir: '/Applications'
@@ -60,6 +61,7 @@ brew 'yarn'
 brew 'cmake'
 brew 'pipenv'
 mas "Xcode", id: 497799835
+brew "heroku/brew/heroku"
 
 # Vidéos
 brew 'ffmpeg'
