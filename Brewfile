@@ -25,15 +25,13 @@ brew 'fish'
 brew 'macvim'
 cask 'iterm2'
 
-# Améliorations d'interface et usage
-cask 'istat-menus'
-
 # Utilitaires divers
 cask 'qlmarkdown'
 cask 'quicklook-csv'
 cask 'quicklook-json'
 mas '1Password', id: 443987910
 mas 'The Unarchiver', id: 425424353
+cask 'istat-menus'
 
 # Backup et synchro
 brew 'mackup'
@@ -52,24 +50,15 @@ brew 'pkg-config'
 brew 'postgresql'
 brew 'python'
 brew 'fontconfig'
-# https://github.com/tonsky/FiraCode/wiki#installing-font
 cask 'font-fira-code'
 cask 'font-source-code-pro'
-# https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
 cask 'font-hack-nerd-font'
 cask 'github'
 cask 'visual-studio-code'
 brew 'teensy_loader_cli'
 brew 'yarn'
-
-mas "DaisyDisk", id: 411643860
-mas "Day One", id: 1055511498
-mas "Moom", id: 419330170
-mas "Sweet Home 3D", id: 669289700
-mas "Things", id: 904280696
-mas "Todoist", id: 585829637
-mas "Trello", id: 1278508951
-mas "Tweetbot", id: 1384080005
+brew 'cmake'
+brew 'pipenv'
 mas "Xcode", id: 497799835
 
 # Vidéos
@@ -88,4 +77,12 @@ cask 'netnewswire'
 # cask 'keep-it'
 cask 'capture-one'
 cask 'launchbar'
-brew 'cmake'
+mas "DaisyDisk", id: 411643860
+mas "Day One", id: 1055511498
+mas "Moom", id: 419330170
+mas "Sweet Home 3D", id: 669289700
+mas "Things", id: 904280696
+mas "Todoist", id: 585829637
+mas "Trello", id: 1278508951
+mas "Tweetbot", id: 1384080005
+
