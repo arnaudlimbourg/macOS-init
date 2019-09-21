@@ -62,6 +62,7 @@ brew 'cmake'
 brew 'pipenv'
 mas "Xcode", id: 497799835
 brew "heroku/brew/heroku"
+brew 'redis'
 
 # Vidéos
 brew 'ffmpeg'
