@@ -8,6 +8,8 @@ brew upgrade
 
 brew cask outdated --greedy --verbose | grep -v '(latest)' | cut -f1 -d" " | xargs -I % sh -c 'brew cask uninstall %; brew cask install %;'
 
+mas upgrade
+
 brew cleanup -s
 
 brew doctor
