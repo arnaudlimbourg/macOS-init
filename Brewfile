@@ -1,92 +1,132 @@
-# Taps
-
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'caskroom/drivers'
+tap "adoptopenjdk/openjdk"
 tap "heroku/brew"
-
-# Définir où placer les applications installées
-cask_args appdir: '/Applications'
-
-# Permettre l'installation d'applications de l'AppStore
-brew 'mas'
-
-# Réseau
-brew 'curl'
-brew 'dnscrypt-proxy', restart_service: true
-brew 'openssh'
-brew 'openssl'
-brew 'wget'
-cask 'transmit'
-
-# Terminal
-brew 'fish'
-brew 'macvim'
-cask 'iterm2'
-
-# Utilitaires divers
-cask 'qlmarkdown'
-cask 'quicklook-csv'
-cask 'quicklook-json'
-mas '1Password', id: 443987910
-mas 'The Unarchiver', id: 425424353
-cask 'istat-menus'
-
-# Backup et synchro
-brew 'mackup'
-cask 'backblaze'
-cask 'google-drive-file-stream'
-
-# Web
-cask 'firefox'
-cask 'google-chrome'
-cask 'google-chrome-canary'
-
-# Développement
-brew 'git'
-brew 'node'
-brew 'pkg-config'
-brew 'postgresql'
-brew 'python'
-brew 'fontconfig'
-cask 'font-fira-code'
-cask 'font-source-code-pro'
-cask 'font-hack-nerd-font'
-cask 'github'
-cask 'visual-studio-code'
-brew 'teensy_loader_cli'
-brew 'yarn'
-brew 'cmake'
-brew 'pipenv'
-mas "Xcode", id: 497799835
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+tap "osx-cross/avr"
+tap "px4/px4"
+tap "superfly/tap"
+tap "wez/wezterm"
+brew "adr-tools"
+brew "avrdude"
+brew "bat"
+brew "black"
+brew "broot"
+brew "fontconfig"
+brew "carthage"
+brew "clang-format"
+brew "cmake"
+brew "curl"
+brew "datasette"
+brew "dfu-programmer"
+brew "dfu-util"
+brew "diff-so-fancy"
+brew "dust"
+brew "exa"
+brew "fd"
+brew "pkg-config"
+brew "ffmpeg"
+brew "fish"
+brew "fzf"
+brew "gcc"
+brew "gh"
+brew "git"
+brew "pinentry"
+brew "gnupg"
+brew "highlight"
+brew "howdoi"
+brew "htop"
+brew "hub"
+brew "imagemagick"
+brew "imageoptim-cli"
+brew "ipython"
+brew "jq"
+brew "legit"
+brew "mackup"
+brew "macvim"
+brew "mailhog"
+brew "mas"
+brew "mkvtoolnix"
+brew "node"
+brew "openssh"
+brew "pinentry-mac"
+brew "pipenv"
+brew "poetry"
+brew "poppler"
+brew "postgresql", restart_service: true
+brew "postgresql@11"
+brew "postgresql@12"
+brew "procs"
+brew "pyenv"
+brew "pygments"
+brew "redis"
+brew "ripgrep"
+brew "rust"
+brew "sd"
+brew "starship"
+brew "teensy_loader_cli"
+brew "tokei"
+brew "tree"
+brew "wget"
+brew "xml2"
+brew "yarn"
+brew "youtube-dl"
+brew "zenith"
+brew "zoxide"
 brew "heroku/brew/heroku"
-brew 'redis'
-brew 'mailhog'
-
-# Vidéos
-brew 'ffmpeg'
-brew 'youtube-dl'
-cask 'vlc'
-
-# Divertissement
-cask 'steam'
-
-# Communication
-cask 'twist'
-
-# Bureautique
-cask 'netnewswire'
-# cask 'keep-it'
-cask 'capture-one'
-cask 'launchbar'
+brew "mongodb/brew/mongodb-community"
+brew "osx-cross/avr/avr-gcc@8", link: true
+brew "px4/px4/gcc-arm-none-eabi"
+brew "superfly/tap/flyctl"
+brew "wez/wezterm/wezterm"
+cask "adoptopenjdk8"
+cask "backblaze-downloader"
+cask "beacon-scanner"
+cask "capture-one"
+cask "cursorsense"
+cask "discord"
+cask "firefox"
+cask "font-fira-code"
+cask "font-hack-nerd-font"
+cask "font-input"
+cask "font-monofur-for-powerline"
+cask "font-source-code-pro"
+cask "google-chrome"
+cask "google-chrome-canary"
+cask "google-drive-file-stream"
+cask "imageoptim"
+cask "istat-menus"
+cask "iterm2"
+cask "launchbar"
+cask "pdf-expert"
+cask "poedit"
+cask "screenflow"
+cask "sourcetree"
+cask "steam"
+cask "transmit"
+cask "twist"
+cask "vassal"
+cask "visual-studio-code"
+cask "vlc"
+cask "volt"
+cask "zoomus"
 mas "DaisyDisk", id: 411643860
 mas "Day One", id: 1055511498
+mas "Divinity - Original Sin 2", id: 1441532941
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keep It", id: 1272768911
+mas "Keynote", id: 409183694
 mas "Moom", id: 419330170
+mas "NextDNS", id: 1464122853
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Sweet Home 3D", id: 669289700
+mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
-mas "Todoist", id: 585829637
-mas "Trello", id: 1278508951
 mas "Tweetbot", id: 1384080005
-
+mas "Xcode", id: 497799835
