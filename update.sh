@@ -6,7 +6,7 @@
 brew update
 brew upgrade
 
-brew outdated --cask --greedy --verbose | grep -v '(latest)' | cut -f1 -d" " | xargs -I % sh -c 'brew cask uninstall %; brew cask install %;'
+brew outdated --cask --greedy --verbose | grep -v '(latest)' | cut -f1 -d" " | xargs -I % sh -c 'brew uninstall --cask%; brew install --cask %;'
 
 mas upgrade
 
