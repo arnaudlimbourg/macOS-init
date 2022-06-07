@@ -8,6 +8,12 @@ brew upgrade
 
 brew outdated --cask --greedy --verbose | grep -v '(latest)' | cut -f1 -d" " | xargs -I % sh -c 'brew uninstall --cask %; brew install --cask %;'
 
+# We run neovim-nightly so we need to force the upgrade
+brew reinstall neovim
+
+# We run wezterm-nightly so we need to force the upgrade
+brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latestA
+
 mas upgrade
 
 brew cleanup -s
@@ -15,4 +21,4 @@ brew cleanup -s
 brew doctor
 
 echo ""
-echo "====> Update done!"
+echo "==> Update done!"
