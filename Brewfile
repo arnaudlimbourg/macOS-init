@@ -1,4 +1,3 @@
-tap "adoptopenjdk/openjdk"
 tap "clementtsang/bottom"
 tap "dart-lang/dart"
 # tap "hashicorp/tap"
