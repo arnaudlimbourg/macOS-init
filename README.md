@@ -19,7 +19,7 @@ Voir la présentation détaillée dans mon billet de blog « [automatiser l'ins
 
 1. Téléchargez la dernière version du projet ([lien direct](https://github.com/arnaudlimbourg/macOS-init/archive/master.zip)) ;
 1. Ouvrez les fichiers `run-first.sh` et `Brewfile`, et modifiez ce qui est installé par défaut ;
-1. Pensez à changer les lignes `brew cask install dropbox` et `open -a Dropbox` de [`post-install.sh`](https://github.com/arnaudlimbourg/macOS-init/blob/master/post-install.sh) en fonction du service Cloud utilisé, ou alors à la supprimer si vous ne voulez pas en utilisez ;
+1. Pensez à changer les lignes `brew cask install dropbox` et `open -a Dropbox` de [`post-sync.sh`](https://github.com/arnaudlimbourg/macOS-init/blob/master/post-sync.sh) en fonction du service Cloud utilisé, ou alors à la supprimer si vous ne voulez pas en utilisez ;
 1. À partir de la ligne `## *** CONFIGURATION ***`, le script configure quelques réglages par défaut, à modifier selon vos besoins ;
 1. Run file `./run-first.sh`
 
