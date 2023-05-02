@@ -22,11 +22,9 @@ then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Allow nushell as a shell
-echo /usr/local/bin/nu | sudo tee -a /etc/shells
-
-echo "Switch to nu shell"
-chsh -s /usr/local/bin/nu
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Mettre à jour la liste des applications disponibles
 brew update
@@ -35,7 +33,14 @@ brew update
 # et mettre à jour celles déjà présentes
 brew bundle
 
-echo "Finalisation des outils de dev"
+echo "Finalisation install de base"
+
+# Allow nushell as a shell
+echo /usr/local/bin/nu | sudo tee -a /etc/shells
+
+echo "Switch to nu shell"
+chsh -s /usr/local/bin/nu
+
 # brew services start postgresql
 
 ## ************************* CONFIGURATION ********************************
