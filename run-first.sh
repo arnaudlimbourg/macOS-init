@@ -22,10 +22,11 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
+# Allow nushell as a shell
+echo /usr/local/bin/nu | sudo tee -a /etc/shells
 
-echo "Switch to fish shell"
-chsh -s /usr/local/bin/fish
+echo "Switch to nu shell"
+chsh -s /usr/local/bin/nu
 
 # Mettre à jour la liste des applications disponibles
 brew update
@@ -35,7 +36,7 @@ brew update
 brew bundle
 
 echo "Finalisation des outils de dev"
-brew services start postgresql
+# brew services start postgresql
 
 ## ************************* CONFIGURATION ********************************
 echo "Configuration de quelques paramètres par défaut"
