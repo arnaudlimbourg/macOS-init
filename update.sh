@@ -12,7 +12,7 @@ brew outdated --cask --greedy --verbose | grep -v '(latest)' | cut -f1 -d" " | x
 # brew reinstall neovim
 
 # We run wezterm-nightly so we need to force the upgrade
-brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest
+brew upgrade homebrew/cask-versions/wezterm-nightly --no-quarantine --greedy-latest
 
 mas upgrade
 
